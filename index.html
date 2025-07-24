@@ -28,6 +28,64 @@
 .navbar-fixed-top {
   top: auto;
 }
+
+/* Custom header styles */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-brand .navbar-logo img {
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-collapse {
+  flex-grow: 1;
+}
+
+.navbar-nav {
+  gap: 1rem;
+}
+
+.navbar-buttons {
+  margin-right: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .navbar-brand {
+    order: 1;
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  .navbar-toggler {
+    order: 0;
+  }
+  
+  .navbar-collapse {
+    order: 2;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .navbar-buttons {
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-nav {
+    margin-right: auto;
+  }
+  
+  .navbar-brand {
+    margin-left: auto;
+  }
+}
 </style>
 </head>
 <body>
@@ -37,14 +95,6 @@
 
     <nav class="navbar navbar-dropdown opacityScrollOff navbar-fixed-top navbar-expand-lg">
         <div class="container-fluid">
-            <div class="navbar-brand">
-                <span class="navbar-logo">
-					<a href="#">
-						<img src="https://r.mobirisesite.com/1658761/assets/images/photo-1523961131990-5ea7c61b2107.jpeg" alt="" style="height: 3rem;">
-					</a>
-				</span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="#">Arivu</a></span>
-            </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 				<div class="hamburger">
 					<span></span>
@@ -54,7 +104,8 @@
 				</div>
 			</button>
             <div class="collapse navbar-collapse opacityScrollOff" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
+                <ul class="navbar-nav nav-dropdown me-auto" data-app-modern-menu="true">
+                    <li class="nav-item">
                         <a class="nav-link link text-black display-4" href="#">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -62,9 +113,23 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link text-black show display-4" href="#" aria-expanded="true">Projects</a>
-                    </li></ul>
+                    </li>
+                </ul>
                 
-                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-primary display-4" href="#">Contact Us</a></div>
+                <div class="navbar-buttons mbr-section-btn me-3">
+                    <a class="btn btn-primary display-4" href="#">Contact Us</a>
+                </div>
+            </div>
+            
+            <div class="navbar-brand ms-auto">
+                <span class="navbar-logo">
+					<a href="#">
+						<img src="https://r.mobirisesite.com/1658761/assets/images/photo-1523961131990-5ea7c61b2107.jpeg" alt="Arivu Kalam Logo" style="height: 3rem;">
+					</a>
+				</span>
+                <span class="navbar-caption-wrap">
+                    <a class="navbar-caption text-black display-4" href="#">Arivu Kalam</a>
+                </span>
             </div>
         </div>
     </nav>
