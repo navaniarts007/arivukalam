@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-  <link rel="shortcut icon" href="https://r.mobirisesite.com/1658761/assets/images/photo-1523961131990-5ea7c61b2107.jpeg" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/images/arivu-kalam-logo.png" type="image/png">
   <meta name="description" content="Arivu Kalam is a multidisciplinary technology innovation company specializing in environmental solutions, agri-tech, and electric mobility. Website showcases their expertise with a sleek, dark-themed design and engaging animations.">
   <title>Arivu Kalam: Technology Innovation for Environmental & Agri-Tech Solutions</title>
   <link rel="stylesheet" href="https://r.mobirisesite.com/1658761/assets/web/assets/mobirise-icons2/mobirise2.css?rnd=1753345946216">
@@ -27,6 +27,45 @@
 <style>
 .navbar-fixed-top {
   top: auto;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
+
+.navbar {
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+}
+
+.nav-link {
+  font-weight: 500;
+  padding: 0.5rem 1rem !important;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background: rgba(0,123,255,0.1);
+  color: #007bff !important;
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  border: none;
+  border-radius: 25px;
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,123,255,0.4);
+  background: linear-gradient(135deg, #0056b3, #004085);
 }
 
 /* Custom header styles */
@@ -36,9 +75,46 @@
   gap: 0.5rem;
 }
 
-.navbar-brand .navbar-logo img {
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+.brand-link {
+  display: flex !important;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.brand-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0.08));
+}
+
+.brand-logo {
+  height: 2.5rem;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.brand-link:hover .brand-logo {
+  transform: scale(1.05);
+}
+
+.brand-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  font-family: 'Liter', serif;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #333, #666);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: none;
 }
 
 .navbar-collapse {
@@ -74,6 +150,29 @@
   .navbar-buttons {
     margin-right: 0;
     margin-top: 1rem;
+  }
+  
+  .brand-text {
+    font-size: 1.25rem;
+  }
+  
+  .brand-logo {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-link {
+    padding: 0.4rem 0.8rem;
+    gap: 0.5rem;
+  }
+  
+  .brand-text {
+    font-size: 1.1rem;
+  }
+  
+  .brand-logo {
+    height: 1.8rem;
   }
 }
 
@@ -123,13 +222,11 @@
             
             <div class="navbar-brand ms-auto">
                 <span class="navbar-logo">
-					<a href="#">
-						<img src="https://r.mobirisesite.com/1658761/assets/images/photo-1523961131990-5ea7c61b2107.jpeg" alt="Arivu Kalam Logo" style="height: 3rem;">
+					<a href="#" class="brand-link">
+						<img src="assets/images/arivu-kalam-logo.jpg" alt="Arivu Kalam Logo" class="brand-logo">
+                        <span class="brand-text">Arivu Kalam</span>
 					</a>
 				</span>
-                <span class="navbar-caption-wrap">
-                    <a class="navbar-caption text-black display-4" href="#">Arivu Kalam</a>
-                </span>
             </div>
         </div>
     </nav>
